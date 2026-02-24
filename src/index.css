@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-bg: #0a0a0a;
+  --color-card: #141414;
+  --color-accent: #10b981; /* Emerald */
+  --color-border: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-zinc-100 font-sans antialiased;
+  }
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur-md border border-white/10;
+}
+
+.game-card-hover {
+  @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-accent/10 hover:border-accent/30;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
